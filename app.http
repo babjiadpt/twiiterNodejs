@@ -1,0 +1,92 @@
+//API: 1;
+//user register;
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username":"JoeBiden",
+  "password":"biden@123",
+  "name": "Joe Biden",
+  "gender": "male"
+}
+
+###
+
+//API: 2;
+//user login;
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username":"JoeBiden",
+  "password":"biden@123"
+}
+
+###
+
+//API: 3;
+//Returns the latest tweets of people whom the user follows. Return 4 tweets at a time;
+GET http://localhost:3000/user/tweets/feed
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjkxNTYxMDc3fQ.geqL4AdklzDegaTbfJR8_Xyj9ZVwfoivuP3UD5nVvso
+
+###
+
+//API : 4;
+//Returns the list of all names of people whom the user follows;
+GET http://localhost:3000/user/following
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjkxNTYxMDc3fQ.geqL4AdklzDegaTbfJR8_Xyj9ZVwfoivuP3UD5nVvso
+
+###
+
+//API : 5;
+//Returns the list of all names of people who follows the user;
+GET http://localhost:3000/user/followers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjkxNTYxMDc3fQ.geqL4AdklzDegaTbfJR8_Xyj9ZVwfoivuP3UD5nVvso
+
+###
+
+//API : 6;
+//get tweet with tweet id;
+GET http://localhost:3000/tweets/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjkxNTYxMDc3fQ.geqL4AdklzDegaTbfJR8_Xyj9ZVwfoivuP3UD5nVvso
+
+###
+
+//API: 7;
+//get all likes of a tweet with tweet id if the user follows the tweeter;
+GET http://localhost:3000/tweets/1/likes/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjkxNTYxMDc3fQ.geqL4AdklzDegaTbfJR8_Xyj9ZVwfoivuP3UD5nVvso
+
+###
+
+//API: 8;
+//get all replies of a tweet with tweet id if the user follows the tweeter;
+GET http://localhost:3000/tweets/1/replies/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjkxNTYxMDc3fQ.geqL4AdklzDegaTbfJR8_Xyj9ZVwfoivuP3UD5nVvso
+
+###
+
+//API: 9;
+//Returns a list of all tweets of the user;
+GET http://localhost:3000/user/tweets/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjkxNTYxMDc3fQ.geqL4AdklzDegaTbfJR8_Xyj9ZVwfoivuP3UD5nVvso
+
+###
+
+//API : 10;
+//Create a tweet in the tweet table;
+POST http://localhost:3000/user/tweets/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjkxNTYxMDc3fQ.geqL4AdklzDegaTbfJR8_Xyj9ZVwfoivuP3UD5nVvso
+
+{
+   "tweet": "The Mornings..."
+}
+
+###
+
+//API : 11;
+//If the user deletes his tweet;
+DELETE http://localhost:3000/tweets/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjkxNTYxMDc3fQ.geqL4AdklzDegaTbfJR8_Xyj9ZVwfoivuP3UD5nVvso
+
+###
